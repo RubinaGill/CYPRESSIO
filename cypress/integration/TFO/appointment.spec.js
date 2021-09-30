@@ -1,6 +1,6 @@
 describe('to contact TFO company', () => {
     beforeEach(() => {
-        cy.visit(baseUrl);
+        cy.visit('/');
         cy.get('#hs-eu-confirmation-button').click();
         cy.get('#hs-eu-confirmation-button', { timeout: 7 * 1000 }).should('not.be.visible');
     });
