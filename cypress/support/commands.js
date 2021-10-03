@@ -26,4 +26,10 @@
 Cypress.Commands.add('clickLink', (label) => {
     cy.log("calling command");
     cy.get('a').contains(label).click()
-  })
+  });
+
+  beforeEach(() => {
+    cy.visit('/');
+    cy.get('#hs-eu-confirmation-button').click();
+    cy.get('#hs-eu-confirmation-button', { timeout: 7 * 1000 }).should('not.be.visible');
+});
