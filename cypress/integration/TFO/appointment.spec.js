@@ -21,9 +21,9 @@ describe('to contact TFO company',  {browser:'chrome'}, () => {
         cy.get("#firstname").type('{shift+t} last name', { force: true });
         cy.get("#lastname").type('test last name', { force: true });
     });
-    it('should select nationality',() => {
+    it.only('should select nationality',() => {
         cy.contains("Contact Us").click();
-        cy.get('#nationality',{force: true}).select('Albanian',{force: true});
+        cy.get('#nationality').select('Albanian');
     });
     it('is not written yet')
 });

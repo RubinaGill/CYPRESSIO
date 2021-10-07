@@ -2,5 +2,9 @@
   "viewportWidth": 1500,
   "viewportHeight": 660,
   "projectId": "19gthm",
-  "baseUrl":"https://www.tfoco.com/en/"
+  "baseUrl":"https://www.tfoco.com/en/",
+  "retries": {
+    "runMode": 2,
+    "openMode": 1
+  }
 }
